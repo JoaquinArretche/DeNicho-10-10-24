@@ -1,0 +1,106 @@
+.login .auth-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+}
+
+.login .form {
+  padding: 2rem;
+  border-radius: 10px;
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+  position: relative; /* Para posicionar el botón de cerrar */
+  animation: slideDown 0.3s ease-in-out; /* Animación de aparición */
+}
+
+.login .close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  color: #333;
+}
+
+.login h2 {
+  color: #333;
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+}
+
+.login label {
+  display: block;
+  text-align: left;
+  margin-bottom: 0.5rem;
+  color: #333;
+  font-weight: 500;
+}
+
+.login input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.login input:focus {
+  border-color: #007bff;
+}
+
+.login button {
+  width: 100%;
+  padding: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.login button:hover {
+  background-color: orange;
+}
+
+.login p {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+}
+
+.login span {
+  color: orange;
+  cursor: pointer;
+}
+
+.login span:hover {
+  text-decoration: underline;
+}
+
+.login a {
+  text-decoration: none;
+  color: black;
+}
+
+/* Animación de entrada del modal */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

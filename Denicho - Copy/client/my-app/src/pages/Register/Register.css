@@ -1,0 +1,151 @@
+.register .auth-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+}
+
+.register .form {
+  padding: 2rem;
+  border-radius: 10px;
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+  position: relative; /* For positioning the close button */
+  animation: slideDown 0.3s ease-in-out; /* Appearance animation */
+}
+
+.register .close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  color: #333;
+}
+
+.register h2 {
+  color: #333;
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+}
+
+.register label {
+  display: block;
+  text-align: left;
+  margin-bottom: 0.5rem;
+  color: #333;
+  font-weight: 500;
+}
+
+.register input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.register input:focus {
+  border-color: black;
+}
+
+.register button {
+  width: 100%;
+  padding: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.register button:hover {
+  background-color: orange;
+}
+
+.register p {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+}
+
+.register span {
+  color: orange;
+  cursor: pointer;
+}
+
+.register span:hover {
+  text-decoration: underline;
+}
+
+.register a {
+  text-decoration: none;
+}
+
+/* Tabs styling */
+.register .tabs {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.register .tabs button {
+  flex: 1; /* Make tabs fill the width equally */
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+  padding: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.register .tabs button:hover {
+  background-color: #f0f0f0; /* Light hover effect */
+}
+
+.register .tabs .active {
+  background-color: black;
+  color: white;
+  border-color: black; /* Keep border same for active tab */
+}
+
+/* Animation for modal entry */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .register .form {
+    margin-top: 10rem;
+  }
+
+  .register h2 {
+    font-size: 1.3rem;
+  }
+
+  .register button {
+    font-size: 0.9rem;
+  }
+
+  .register p {
+    font-size: 0.8rem;
+  }
+}

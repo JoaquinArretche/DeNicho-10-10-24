@@ -1,0 +1,188 @@
+@import url("https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap");
+
+:root {
+  --black-color: #171717;
+  --darkgrey-color: #585858;
+  --lightgrey-color: #ededed;
+  --background-color: #f8f8f8;
+  --orange-color: #fd9b40;
+  --blue-color: #b7e4f9;
+  --yellow-color: #fdeb40;
+  --red-color: #d4464c;
+}
+
+.nosotros .scrolling-banner {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  color: rgb(255, 255, 255);
+  padding: 1rem 0rem;
+}
+
+.nosotros .scrolling-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  white-space: nowrap;
+  animation: scroll 20s linear infinite;
+}
+
+.nosotros .scrolling-content h1 {
+  font-size: 8rem;
+  margin-right: 10rem;
+  letter-spacing: 0.25rem;
+  font-weight: 600;
+  font-family: "Gothic A1", sans-serif;
+  text-transform: uppercase;
+}
+
+.nosotros .content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.nosotros .content .title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 2rem 0;
+  gap: 2rem;
+}
+
+.nosotros .content .title img {
+  width: 100px;
+}
+
+.nosotros .content h1 {
+  text-align: center;
+  font-size: 3rem;
+  margin: 2rem 0;
+}
+
+.nosotros .content .text {
+  text-align: center;
+  margin: 0 auto;
+  font-size: 1rem;
+  width: 55%;
+}
+
+.nosotros .content .beneficios {
+  margin: 2rem 0;
+}
+
+.nosotros .content .beneficios h2 {
+  text-align: center;
+  margin: 2rem 0;
+  font-size: 3rem;
+  color: violet;
+  font-weight: 500;
+}
+
+.nosotros .content .beneficios ul li {
+  margin-top: 1rem;
+}
+
+.nosotros .content2 h2 {
+  font-size: 3rem;
+  margin-top: 5rem;
+}
+
+.nosotros .content2 article {
+  display: flex;
+  margin: 2rem 0;
+  align-items: center;
+  gap: 2rem;
+}
+
+.nosotros .content2 article h3 {
+  font-size: 12rem;
+  font-family: "Shadows Into Light", cursive;
+}
+
+.nosotros .content2 article:nth-of-type(1) h3 {
+  color: var(--blue-color);
+}
+
+.nosotros .content2 article:nth-of-type(2) h3 {
+  color: var(--red-color);
+}
+
+.nosotros .content2 article:nth-of-type(3) h3 {
+  color: var(--orange-color);
+}
+
+.nosotros .content2 article div div {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.nosotros .content2 article div div p {
+  font-size: 3rem;
+  font-family: "Shadows Into Light", cursive;
+}
+
+.nosotros .content2 article div div img {
+  margin-bottom: 3rem;
+}
+
+.nosotros .content2 article:nth-of-type(2) {
+  margin-left: 5rem;
+}
+
+.nosotros .content2 article:nth-of-type(3) {
+  margin-left: 10rem;
+}
+
+@media (max-width: 768px) {
+  .nosotros .content .title {
+    flex-direction: column;
+  }
+
+  .nosotros .content .text {
+    width: 100%;
+    font-size: 0.8rem;
+  }
+
+  .nosotros .content .beneficios li {
+    font-size: 0.8rem;
+  }
+
+  .nosotros .content2 h2 {
+    text-align: center;
+    font-size: 2.5rem;
+  }
+
+  .nosotros .content2 article {
+    gap: 1rem;
+  }
+
+  .nosotros .content2 article h3 {
+    font-size: 5rem;
+  }
+
+  .nosotros .content2 article div div {
+    padding-bottom: 0.8rem;
+  }
+
+  .nosotros .content2 article div div img {
+    width: 40px;
+  }
+
+  .nosotros .content2 article div div p {
+    font-size: 2rem;
+  }
+
+  .nosotros .content2 article div div img {
+    margin-bottom: 0rem;
+  }
+
+  .nosotros .content2 article:nth-of-type(2) {
+    margin-left: 1rem;
+  }
+
+  .nosotros .content2 article:nth-of-type(3) {
+    margin-left: 2rem;
+  }
+}

@@ -1,0 +1,20 @@
+.product-card {
+  border: 1px solid black;
+  max-width: 250px;
+  border-radius: 8px;
+}
+
+.product-card img {
+  width: 248px;
+  height: 249px;
+  border-radius: 8px 8px 0 0;
+  object-fit: cover;
+  display: inline-block;
+}
+
+.product-card div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+}

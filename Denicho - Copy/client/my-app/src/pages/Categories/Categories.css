@@ -1,0 +1,201 @@
+.categories {
+  display: flex;
+  padding: 1rem;
+}
+
+.filter-sidebar {
+  flex: 0 0 200px;
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  margin-right: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-height: fit-content;
+}
+
+.filter-sidebar h2 {
+  margin-bottom: 20px;
+  font-size: 20px;
+  color: #333;
+}
+
+.filter-group {
+  margin-bottom: 20px;
+}
+
+.filter-group h3 {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #555;
+  border-bottom: 2px solid #f0f0f0;
+  padding-bottom: 5px;
+}
+
+.filter-group label {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #444;
+}
+
+.filter-group input[type="checkbox"] {
+  margin-right: 8px;
+  accent-color: #000; /* Cambia el color del checkbox */
+}
+
+.slider-margen {
+  margin-bottom: 1rem;
+}
+
+.rc-slider-track {
+  background-color: #000 !important;
+  height: 6px !important;
+  border-radius: 3px;
+}
+
+.rc-slider-handle {
+  border: 2px solid #000 !important;
+  height: 20px !important;
+  width: 20px !important;
+  margin-top: -7px;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.rc-slider-handle:hover,
+.rc-slider-handle:focus {
+  border-color: #ff7f50 !important; /* Cambia el color al hacer hover o focus */
+  box-shadow: 0 0 5px #ff7f50;
+}
+
+.product-container {
+  flex: 1;
+  flex-direction: column;
+  padding: 1rem;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow-x: hidden;
+}
+
+.category-section {
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.category-section h2 {
+  padding-bottom: 0.5rem;
+  margin-top: 2rem;
+  color: #333;
+}
+
+.product-scroll {
+  display: flex;
+  gap: 2rem; /* Space between products */
+  overflow-x: auto; /* Allows horizontal scrolling */
+  scroll-behavior: smooth; /* Smooth scrolling effect */
+  padding: 10px; /* Padding around the scrollable area */
+  scrollbar-width: thin; /* For Firefox */
+  max-width: 100%; /* Ensure it takes the full width of the parent */
+}
+
+.product-container h1 {
+  padding: 1rem 0;
+}
+
+.product-scroll {
+  display: flex;
+  gap: 2rem; /* Espacio entre productos */
+  overflow-x: auto; /* Permitir desplazamiento horizontal */
+  padding: 1rem 0;
+  scroll-behavior: smooth; /* Efecto de desplazamiento suave */
+  max-width: 100%; /* Asegurarse de que no exceda el ancho del contenedor */
+  box-sizing: border-box; /* Incluir padding en cálculos de ancho */
+  scrollbar-width: thin; /* Establece el ancho de la scrollbar en Firefox */
+  scrollbar-color: rgb(255, 255, 255) #f1f1f1; /* Color de la barra de desplazamiento y color del fondo */
+}
+
+/* Para Chrome y Safari */
+.product-scroll::-webkit-scrollbar {
+  height: 4px; /* Oculta la altura de la scrollbar horizontal */
+}
+
+.product-scroll::-webkit-scrollbar-thumb {
+  background: rgb(240, 240, 240); /* Color de la barra de desplazamiento */
+  border-radius: 1rem; /* Bordes redondeados */
+}
+
+.product-scroll::-webkit-scrollbar-track {
+  background: #b5b5b5; /* Color del fondo de la barra de desplazamiento */
+}
+
+/* Para Firefox */
+.product-scroll {
+  scrollbar-width: thin; /* Establece el ancho de la scrollbar */
+  scrollbar-color: rgb(143, 143, 143) #ffffff; /* Color de la barra de desplazamiento y color del fondo */
+}
+
+.filter-sidebar {
+  flex: 0 0 250px;
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  margin-right: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.product-container {
+  position: relative;
+}
+
+.filter-toggle {
+  position: absolute;
+  top: 0;
+  right: 0rem;
+  padding: 0.5rem;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  font-size: 1.25rem;
+  background-color: black;
+  border-radius: 0 0 0 1rem;
+}
+
+@media (max-width: 768px) {
+  .filter-sidebar {
+    position: fixed; /* Fixed position in mobile */
+    bottom: 0; /* Align to the bottom */
+    left: 0;
+    width: 100%;
+    transform: translateY(100%); /* Initially hidden */
+    transition: transform 0.3s ease; /* Smooth transition */
+    z-index: 1000; /* Ensure it stays above other content */
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2); /* Shadow at the top */
+  }
+
+  .filter-sidebar.visible {
+    transform: translateY(0); /* Slide in from the bottom */
+  }
+
+  .filter-toggle {
+    display: block; /* Show the toggle button on mobile */
+  }
+}
+
+@media (min-width: 769px) {
+  .filter-sidebar {
+    display: block; /* Always show in desktop */
+    position: relative; /* Reset to relative for larger screens */
+    transform: translateY(0); /* Ensure it's always visible */
+  }
+
+  .filter-toggle {
+    display: none; /* Hide toggle button on desktop */
+  }
+}
